@@ -30,7 +30,7 @@ gulp.task('css', function () {
         autoprefixer({browsers: ['last 3 version']}),
         cssnano()
     ];
-    return gulp.src('./assets/*.css')
+    return gulp.src('./src/*.css')
         .pipe(postcss(plugins))
         .pipe(gulp.dest('./dest'));
 });
