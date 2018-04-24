@@ -9,6 +9,7 @@ body {
     display:none;
 }
 .global-nav{
+    left:0;
     top:0;
     position: fixed;
     background: rgba(51,51,51,0.95);
@@ -27,6 +28,7 @@ body {
     transition:.75s all ease-in-out;
 }
 .menu_nav {
+    z-index: 900;
     background:black;
     color:white;
     text-align: center;
@@ -152,7 +154,85 @@ body {
 }
 
 
-
+.global-footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding:0 20px;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#f2f2f2;
+    color:#a1a1a1;
+}
+.global-footer section {
+    display: inline;
+    
+    padding:0;
+    margin:17px auto;
+}
+.global-footer section small {
+    font-size: 12px;
+}
+.global-footer nav {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    border-top:1px solid #d6d6d6;
+}
+.global-footer .directory-section {
+    width:100%;
+    border-bottom:1px solid #d6d6d6;
+}
+.global-footer .directory-section-label {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: space-between;
+    width:100%;
+    transition: .2s all ease-in-out;
+}
+.global-footer .directory-section-label h3 {
+    margin-right:auto;
+}
+.global-footer .directory-section-label a {
+    transition: .2s all ease-in-out;
+    margin-left:auto;
+}
+.global-footer .directory-section-label:hover {
+    color: black;
+}
+.global-footer .directory-section-label a.active {
+    transform: rotateZ(50deg);
+}
+.global-footer .directory-section-label * {
+    margin:auto auto;
+    color:#414141;
+    font-weight: 400;
+    font-size:.8em;
+    line-height: 100%;
+}
+.global-footer .directory-section-list{
+    height:0;
+    overflow: hidden;
+    transition:.2s all ease-in-out;
+}
+.global-footer .directory-section-list.active{
+    height:100%;
+}
+.global-footer nav .directory-section-list ul {
+    overflow: hidden;
+    padding:0;
+    padding-left:.5em;
+    list-style: none;
+}
+.global-footer nav .directory-section-list ul li a {
+    font-size:.7em;
+    color: #414141;
+    text-decoration: none;
+}
+.global-footer nav .directory-section-list ul li a {
+    text-decoration: underline;
+}
 @media screen and (max-width:723px){
     .gn-list {
         display:none;

@@ -35,6 +35,10 @@ function menuAnimation() {
 $("#nav-icon").click(function(){
     menuAnimation()
 });
+$(".directory-section-label").click(function(){
+    $(this).find('a').toggleClass('active');
+    $(this).next().toggleClass('active');
+});
 
 window.addEventListener('resize',function(){
     if(window.innerWidth > 723 && $(".menu_nav").hasClass("active")){
