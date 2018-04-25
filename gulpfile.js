@@ -26,13 +26,18 @@ gulp.task('html', function() {
 });
 
 gulp.task('css', function () {
-    var plugins = [
-        autoprefixer({browsers: ['last 3 version']}),
-        cssnano()
-    ];
-    return gulp.src('./src/*.css')
-        .pipe(postcss(plugins))
-        .pipe(gulp.dest('./dest'));
+    try {
+        var plugins = [
+            autoprefixer({browsers: ['last 3 version']}),
+            cssnano()
+        ];
+        return gulp.src('./src/*.css')
+            .pipe(postcss(plugins))
+            .pipe(gulp.dest('./dest'));
+    } catch (error) {
+        console.log(error)
+    }
+    
 });
 gulp.task('js', function(){
     gulp.src('./src/*.js')

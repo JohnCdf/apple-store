@@ -153,11 +153,78 @@ body {
     color: grey;
 }
 
+.main {
+    width:100%;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+}
+.homepage-section {
+    width:100%;
+}
 
+.section ul {
+    padding:0;
+    margin:auto;
+}
+.unit-wrapper {
+    max-height: 85vh;
+    overflow: hidden;
+}
+.unit-wrapper .unit-copy-wrapper h2 {
+    font-weight: bold;
+    font-size:3em;
+    margin:.5em auto 0 auto;
+}
+.unit-copy-wrapper a {
+    color:white;font-weight: lighter;
+    text-decoration: none;
+}
+.unit-copy-wrapper a:hover {
+    text-decoration: underline;
+}
+figure {
+    margin:auto auto;
+}
+figure img{
+    margin:0;
+    max-width:100%;
+}
+.unit-link{
+    width:100%;
+    margin:auto auto;
+    height: 100%;
+    line-height: 100%;
+    
+    color:transparent;
+    display:block;
+}
+
+#red-unit {
+    color:white;
+    background-color:#b40626;
+}
+#red-unit h3{
+    display:inline-flex;
+    min-width:40%;
+    margin:auto;
+    justify-content: space-around;
+}
+#red-unit a::after {
+    content:"→";
+}
+span.violator {
+    border:1px solid white;
+    border-radius:5px;
+    padding:2px;
+}
+uni {
+    font-weight:100;
+}
 .global-footer {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     padding:0 20px;
     left:0;
     right:0;
@@ -166,7 +233,7 @@ body {
     color:#a1a1a1;
 }
 .global-footer section {
-    display: inline;
+    height:100%;
     
     padding:0;
     margin:17px auto;
@@ -176,7 +243,7 @@ body {
 }
 .global-footer nav {
     width:100%;
-    display:flex;
+    display:inline-flex;
     flex-direction: column;
     border-top:1px solid #d6d6d6;
 }
@@ -193,23 +260,24 @@ body {
 }
 .global-footer .directory-section-label h3 {
     margin-right:auto;
+    color:#414141;
+    font-weight: 400;
+    font-size:.8em;
+    line-height: 100%;
 }
 .global-footer .directory-section-label a {
     transition: .2s all ease-in-out;
-    margin-left:auto;
+    margin:auto 0 auto auto;
+    color:#414141;
+    font-weight: 400;
+    font-size:.8em;
+    line-height: 100%;
 }
 .global-footer .directory-section-label:hover {
     color: black;
 }
 .global-footer .directory-section-label a.active {
-    transform: rotateZ(50deg);
-}
-.global-footer .directory-section-label * {
-    margin:auto auto;
-    color:#414141;
-    font-weight: 400;
-    font-size:.8em;
-    line-height: 100%;
+    transform: rotateZ(45deg);
 }
 .global-footer .directory-section-list{
     height:0;
