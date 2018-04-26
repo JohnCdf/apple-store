@@ -102,13 +102,47 @@ body {
     position: absolute;
     top:26px;
 }
+
 #nav-icon.active span:nth-child(1){
-    transform: rotate(135deg);
-    top:23px;
+    animation: top-slice .6s forwards 1;
 }
 #nav-icon.active span:nth-child(2){
-    transform: rotate(-135deg);
-    top:23px;
+    animation: bottom-slice .6s forwards 1;
+}
+
+@keyframes top-slice {
+    0% {
+        top:19px;
+        transform: rotate(0);
+    }
+    25% {
+        top:22px;
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        top:22px;
+        transform: rotate(-135deg);
+    }
+}
+@keyframes bottom-slice {
+    0% {
+        top:26px;
+        transform: rotate(0);
+    }
+    25% {
+        top:22px;
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        top:22px;
+        transform: rotate(-45deg);
+    }
 }
 .gn-header ul{
     margin: 0;
